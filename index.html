@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="cozy-light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeskBuddy: seu dia organizado, com o Mochi do lado</title>
+    <meta
+      name="description"
+      content="App gratuito para Windows com missões, hábitos, foco, lembretes e notas. O Mochi, um bolinho de arroz em pixel art, acompanha seu dia. Tudo fica no seu computador."
+    />
+    <meta property="og:title" content="DeskBuddy: seu dia organizado, com o Mochi do lado" />
+    <meta
+      property="og:description"
+      content="Missões, hábitos, foco e lembretes num app leve para Windows. Grátis, sem conta e sem nuvem."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mateozord.github.io/DeskBuddy/" />
+    <meta property="og:image" content="https://mateozord.github.io/DeskBuddy/shots/inicio.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <meta name="theme-color" content="#eceee3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#171b16" media="(prefers-color-scheme: dark)" />
+    <script>
+      // tema do sistema antes do primeiro desenho (sem piscar); `js` libera as animações de entrada
+      (() => {
+        const q = window.matchMedia('(prefers-color-scheme: dark)');
+        const apply = () =>
+          (document.documentElement.dataset.theme = q.matches ? 'cozy-dark' : 'cozy-light');
+        apply();
+        q.addEventListener('change', apply);
+        document.documentElement.classList.add('js');
+      })();
+    </script>
+    <script type="module" crossorigin src="/DeskBuddy/assets/index-D249Gtxo.js"></script>
+    <link rel="stylesheet" crossorigin href="/DeskBuddy/assets/index-DWfHSCzQ.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
